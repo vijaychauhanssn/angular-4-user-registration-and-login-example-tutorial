@@ -1,0 +1,35 @@
+
+<app-header></app-header>
+<div class="app-body">
+  <app-sidebar></app-sidebar>
+  <!-- Main content -->
+  <main class="main">
+         <div class="app flex-row align-items-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-12">
+                <div class="card-group mb-0">
+                  <div class="card p-4">
+                    <div class="card-body">
+                      <h1 class="text-muted">Hi {{currentUser.firstName}}!</h1>
+                         <p >You're logged in with  Our Team</p>
+                           <h3 class="text-muted">All registered users:</h3>
+                            <ul>
+                                <li *ngFor="let user of users">
+                                    {{user.username}} ({{user.firstName}} {{user.lastName}})
+                                    - <a (click)="deleteUser(user._id)">Delete</a>
+                                </li>
+                            </ul>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>  
+<app-aside></app-aside>
+</div>
+
+
+               
