@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-   moduleId: module.id,
-   selector: 'body',
-  template: '<router-outlet></router-outlet>'
+ moduleId: module.id.toString(),
+ selector: 'body',
+ templateUrl: 'app.component.html'
 })
 export class AppComponent {
   title = 'app';

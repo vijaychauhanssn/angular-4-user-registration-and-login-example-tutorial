@@ -1,0 +1,94 @@
+
+<app-header></app-header>
+<div class="app-body">
+  <app-sidebar></app-sidebar>
+  <!-- Main content -->
+  <main class="main">
+    
+     <ol class="breadcrumb">
+      <app-breadcrumbs></app-breadcrumbs>
+      <!-- Breadcrumb Menu-->
+      <li class="breadcrumb-menu d-md-down-none">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <a class="btn" href="#"><i class="icon-speech"></i></a>
+          <a class="btn" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>
+          <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
+        </div>
+      </li>
+    </ol>
+      <div class="container-fluid">
+      <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="card-group mb-0">
+                <div class="card p-4">
+                  <div class="card-body">
+                    <h1 class="text-muted">Hi {{currentUser.firstName}}!</h1>
+                       <p >You're logged in with  Our Team</p>
+                         <h3 class="text-muted">All registered users:</h3>
+                          <ul>
+                              <li *ngFor="let user of users">
+                                  {{user.username}} ({{user.firstName}} {{user.lastName}})
+                                  - <a (click)="deleteUser(user._id)">Delete</a>
+                              </li>
+                          </ul>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <router-outlet></router-outlet>
+    </div><!-- /.conainer-fluid -->
+     <div class="container-fluid">
+      <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="card-group mb-0">
+                <div class="card p-4">
+                  <div class="card-body">
+                    <h1 class="text-muted">Hi {{currentUser.firstName}}!</h1>
+                       <p >You're logged in with  Our Team</p>
+                         <h3 class="text-muted">All registered users:</h3>
+                          <ul>
+                              <li *ngFor="let user of users">
+                                  {{user.username}} ({{user.firstName}} {{user.lastName}})
+                                  - <a (click)="deleteUser(user._id)">Delete</a>
+                              </li>
+                          </ul>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <router-outlet></router-outlet>
+    </div><!-- /.conainer-fluid -->
+     <div class="container-fluid">
+      <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="card-group mb-0">
+                <div class="card p-4">
+                  <div class="card-body">
+                    <h1 class="text-muted">Hi {{currentUser.firstName}}!</h1>
+                       <p >You're logged in with  Our Team</p>
+                         <h3 class="text-muted">All registered users:</h3>
+                          <ul>
+                              <li *ngFor="let user of users">
+                                  {{user.username}} ({{user.firstName}} {{user.lastName}})
+                                  - <a (click)="deleteUser(user._id)">Delete</a>
+                              </li>
+                          </ul>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <router-outlet></router-outlet>
+    </div><!-- /.conainer-fluid -->
+
+    
+    </main>  
+<app-aside></app-aside>
+</div>
+<app-footer></app-footer>
+
+
+
+               
